@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Welcome, <span id="username">User</span>!</h1>
+        <div class="stats">
+            <p>Current Streak: <span id="streak">0</span> days</p>
+            <p>Points: <span id="points">0</span></p>
+        </div>
+        
+        <div class="daily-tip">
+            <h3>Today's Tip</h3>
+            <p id="dailyTip">Loading your daily tip...</p>
+        </div>
+
+        <div class="navigation">
+            <button class="btn" onclick="showTasks()">Tasks</button>
+            <button class="btn btn-secondary" onclick="showGiftCards()">Redeem Points</button>
+            <button class="btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div id="tasksSection" class="hidden">
+            <!-- Tasks will be loaded here -->
+        </div>
+    </div>
+    <script src="database.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+    <script src="tips.js"></script>
+</body>
+</html>
